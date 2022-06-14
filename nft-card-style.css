@@ -39,7 +39,7 @@ div.view::after {
   background-position: 97px 94px;
   width: 240px;
   height: 230px;
-  border-radius: 7fpx;
+  border-radius: 7px;
   top: 0;
   left: 0;
   background-color: hsl(178deg 100% 50% / 50%);
