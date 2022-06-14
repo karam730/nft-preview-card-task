@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Outfit;
+}
+
+.container {
+  background-color: hsl(217, 54%, 11%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: hsl(216, 50%, 16%);
+  margin: 10px;
+  padding: 10px;
+  width: 280px;
+  border-radius: 10px;
+}
+
+div.view {
+  position: relative;
+  height: 230px;
+  width: 240px;
+  transform: translateY(10px);
+}
+
+div.view::after {
+  content: "";
+  position: absolute;
+  background-image: url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: 97px 94px;
+  width: 240px;
+  height: 230px;
+  border-radius: 7fpx;
+  top: 0;
+  left: 0;
+  background-color: hsl(178deg 100% 50% / 50%);
+  display: none;
+}
+
+.nft-img {
+  border-radius: 7px;
+  height: 230px;
+  width: 240px;
+}
+
+p.name {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  transform: translate(-37px,10px);
+  margin: 20px 0;
+}
+
+p.disc {
+  color: hsl(215, 51%, 70%);
+  font-size: 15px;
+  font-weight: 200;
+  margin: 10px;
+  text-align: start;
+  transform: translateX(2px);
+  opacity: 0.8;
+}
+
+span.price,
+span.price-icon {
+  color: hsl(178, 100%, 50%);
+  margin: 15px 2.5px;
+  transform: translateX(-39px);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+span.time-icon {
+  transform: translate(33px, -1px);
+}
+
+span.time {
+  transform: translate(40px, -3px);
+  color: hsl(215, 51%, 70%);
+  font-size: 14px;
+  font-weight: 200;
+}
+
+div.line {
+  position: relative;
+  width: 100%;
+}
+
+div.line::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 20px);
+  height: 1px;
+  background-color: hsl(215, 51%, 70%);
+  opacity: 0.3;
+  left: 10px;
+  bottom: 0;
+}
+
+.creator-img {
+  width: 25px;
+  transform: translate(-30px, 15px);
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-bottom: 30px;
+}
+
+img + span {
+  color: hsl(215, 51%, 70%);
+  font-size: 14px;
+  font-weight: 200;
+  transform: translateX(-19px);
+}
+
+img + span + span {
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+  transform: translateX(-15px);
+  opacity: 0.9;
+}
+
+:is(img + span + span, p.name):hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.nft-img:hover {
+  cursor: pointer;
+}
+
+div.view:hover::after {
+  display: block;
+  cursor: pointer;
+}
